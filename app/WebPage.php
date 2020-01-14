@@ -15,7 +15,7 @@ class WebPage extends Model
      * @var array
      */
     protected $fillable = [
-        'address', 'status_code', 'content',
+        'address', 'status_code', 'content', 'visited_at'
     ];
 
     /**

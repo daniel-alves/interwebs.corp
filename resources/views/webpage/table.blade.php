@@ -21,22 +21,14 @@
             <td>{{ $webpage->status_code }}</td>
             <td>{{ is_null($webpage->visited_at) ? "" : date('d/m/Y', strtotime($webpage->visited_at)) }}</td>
             <td>
-                @if(is_null($webpage->visited_at))
-                    <a href="{{ route('webpages.edit', $webpage->id)}}" class="btn btn-primary btn-sm">Editar</a>
-                @else
-                    <a href="javascript:;" class="btn btn-primary btn-sm disabled">Editar</a>
-                @endif
+                <a href="{{ route('webpages.edit', $webpage->id)}}" class="btn btn-primary btn-sm">Editar</a>
             </td>
             <td>
-                @if(is_null($webpage->visited_at))
-                    <form action="{{ route('webpages.destroy', $webpage->id)}}" method="post">
-                        {{ csrf_field() }}
-                        @method('DELETE')
-                        <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
-                    </form>
-                @else
-                    <a href="javascript:;"  class="btn btn-danger btn-sm disabled" type="submit">Excluir</a>
-                @endif
+                <form action="{{ route('webpages.destroy', $webpage->id)}}" method="post">
+                    {{ csrf_field() }}
+                    @method('DELETE')
+                    <button class="btn btn-danger btn-sm" type="submit">Excluir</button>
+                </form>
             </td>
             <td>
                 @if(!is_null($webpage->visited_at))
