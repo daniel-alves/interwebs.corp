@@ -42,6 +42,11 @@ class WebPageController extends Controller
             'address' => 'required|url'
         ]);
 
+        $data = $request->all();
+        $data["content"] = null;
+        $data["visited_at"] = null;
+        $data["status_code"] = null;
+
         WebPage::create($request->all());
 
         return Redirect::to('webpages')

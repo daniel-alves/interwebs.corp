@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\WebPage;
+use App\Observers\WebPageObserver;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        WebPage::Observe(WebPageObserver::class);
     }
 }
