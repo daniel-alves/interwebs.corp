@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b307042-1235-4ca3-a380-57ffe64605e9" name="Default Changelist" comment="" />
+    <list default="true" id="8b307042-1235-4ca3-a380-57ffe64605e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/WebPageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/WebPage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_01_13_225433_create_web_pages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/webpage/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/webpage/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/webpage/layout.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/webpage/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +27,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -106,13 +124,18 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WLDzaw2ndYvT1UxpKc0WrMKy7E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -121,6 +144,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunManager">
@@ -153,6 +177,7 @@
       <updated>1578920245118</updated>
       <workItem from="1578920248390" duration="3004000" />
       <workItem from="1578930069277" duration="923000" />
+      <workItem from="1578955343815" duration="7083000" />
     </task>
     <servers />
   </component>
@@ -162,14 +187,58 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578956113037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578956113037" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1578958099060">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578958099060" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1578958680954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578958680954" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1578958680954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578958680954" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1578958680953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578958680953" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1578958680954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578958680954" />
+    <state x="794" y="444" key="NewPhpFileDialog" timestamp="1578957426739">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="444" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578957426739" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1578930748021">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1578930748021" />
-    <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1578920261233">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1578962010579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578962010579" />
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1578955350574">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578955350574" />
     <state x="661" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1578920261233" />
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1578957279422">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="118" width="607" height="804" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578957279422" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1578956351879">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1578956351879" />
   </component>
 </project>
