@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -76,5 +77,6 @@
             @yield('content')
         </main>
     </div>
+    @yield('js_footer')
 </body>
 </html>

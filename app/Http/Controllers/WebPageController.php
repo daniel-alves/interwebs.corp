@@ -105,4 +105,16 @@ class WebPageController extends Controller
 
         return Redirect::to('webpages')->with('success','Web page deleted successfully');
     }
+
+    /**
+     * retrive a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function reload()
+    {
+        $data['webpages'] = WebPage::orderBy('id','desc')->paginate(10);
+
+        return view('webpage.table', $data);
+    }
 }
