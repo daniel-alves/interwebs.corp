@@ -40,7 +40,7 @@
             </td>
             <td>
                 @if(!is_null($webpage->visited_at))
-                    <a href="{{ route('webpages.show', $webpage->id)}}" class="btn btn-success btn-sm show-content" data-toggle="modal" data-target="#webpage-content-modal">Conteúdo</a>
+                    <a href="{{ route('webpages.content', $webpage->id)}}" class="btn btn-success btn-sm">Conteúdo</a>
                 @else
                     <a href="javascript:;" class="btn btn-success btn-sm disabled">Conteúdo</a>
                 @endif

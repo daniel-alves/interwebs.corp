@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('webpages/reload', 'WebPageController@reload')->name('webpages.reload');
-Route::get('webpages/content', 'WebPageController@content')->name('webpages.content');
+Route::get('webpages/{id}/content', 'WebPageController@content')->name('webpages.content');
 
 Route::resource('webpages', 'WebPageController');
 

@@ -39,7 +39,7 @@ class CrawlWebPageJob implements ShouldQueue
         Log::channel('crawler')->info("Start crawling Web Page: ", [$this->webPage["address"]]);
 
         try {
-            $client = new Client(['http_errors' => false]);
+            $client = new Client(['http_errors' => false, 'connect_timeout' => 5]);
             $result = $client->get($this->webPage["address"]);
 
             $date = new \DateTime('now');
@@ -47,7 +47,7 @@ class CrawlWebPageJob implements ShouldQueue
             $this->webPage["status_code"] = $result->getStatusCode();
             $this->webPage["visited_at"] = $date->format("Y-m-d H:i:s");
 
-            Storage::put("/webpages/{$this->webPage["id"]}", $result->getBody());
+            Storage::disk('public')->put("/webpages/{$this->webPage["id"]}.html", $result->getBody());
 
             $this->webPage->update();
         } catch(\Exception $e) {

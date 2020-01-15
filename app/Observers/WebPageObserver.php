@@ -46,7 +46,7 @@ class WebPageObserver
     public function deleted(WebPage $webPage)
     {
         Log::channel('crawler')->info("Web Page Deleted: ", [$webPage->id, $webPage->address]);
-        Storage::delete("/webpages/{$webPage->id}");
+        Storage::disk('public')->delete("/webpages/{$webPage->id}.html");
     }
 
     /**

@@ -4719,14 +4719,14 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.
    *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   * Shoutout to Angular 7.html https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
   var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^&:/?#]*(?:[/?#]|$))/gi;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   * Shoutout to Angular 7.html https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
    */
 
   var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[a-z0-9+/]+=*$/i;
@@ -7667,7 +7667,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			};
 		};
 
-		// Support: IE 6 - 7 only
+		// Support: IE 6 - 7.html only
 		// getElementById is not reliable as a find shortcut
 		Expr.find["ID"] = function( id, context ) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
@@ -7779,7 +7779,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
 			}
 
-			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
+			// Support: Chrome<29, Android<4.4, Safari<7.html.0+, iOS<7.html.0+, PhantomJS<1.9.8+
 			if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
 				rbuggyQSA.push("~=");
 			}
@@ -8166,7 +8166,7 @@ Expr = Sizzle.selectors = {
 				4 xn-component of xn+y argument ([+-]?\d*n|)
 				5 sign of xn-component
 				6 x of xn-component
-				7 sign of y-component
+				7.html sign of y-component
 				8 y of y-component
 			*/
 			match[1] = match[1].toLowerCase();
@@ -8543,7 +8543,7 @@ Expr = Sizzle.selectors = {
 		"empty": function( elem ) {
 			// http://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
-			//   but not by others (comment: 8; processing instruction: 7; etc.)
+			//   but not by others (comment: 8; processing instruction: 7.html; etc.)
 			// nodeType < 6 works because attributes (2) do not appear as children
 			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
 				if ( elem.nodeType < 6 ) {
@@ -9669,7 +9669,7 @@ jQuery.each( {
 			return elem.contentDocument;
 		}
 
-		// Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
+		// Support: IE 9 - 11 only, iOS 7.html only, Android Browser <=4.3 only
 		// Treat the template element as a regular one in browsers that
 		// don't support it.
 		if ( nodeName( elem, "template" ) ) {
@@ -12027,7 +12027,7 @@ jQuery.Event = function( src, props ) {
 			returnFalse;
 
 		// Create target properties
-		// Support: Safari <=6 - 7 only
+		// Support: Safari <=6 - 7.html only
 		// Target should not be a text node (#504, #13143)
 		this.target = ( src.target && src.target.nodeType === 3 ) ?
 			src.target.parentNode :
@@ -12186,7 +12186,7 @@ jQuery.each( { focus: "focusin", blur: "focusout" }, function( type, delegateTyp
 // so that event delegation works in jQuery.
 // Do the same for pointerenter/pointerleave and pointerover/pointerout
 //
-// Support: Safari 7 only
+// Support: Safari 7.html only
 // Safari sends mouseenter too often; see:
 // https://bugs.chromium.org/p/chromium/issues/detail?id=470258
 // for the description of the bug (it existed in older Chrome versions as well).
@@ -12763,7 +12763,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		// Support: Android 4.0 - 4.3 only, Firefox <=3 - 44
 		reliableMarginLeftVal = roundPixelMeasures( divStyle.marginLeft ) === 12;
 
-		// Support: Android 4.0 - 4.3 only, Safari <=9.1 - 10.1, iOS <=7.0 - 9.3
+		// Support: Android 4.0 - 4.3 only, Safari <=9.1 - 10.1, iOS <=7.html.0 - 9.3
 		// Some styles come back with percentage values, even though they shouldn't
 		div.style.right = "60%";
 		pixelBoxStylesVal = roundPixelMeasures( divStyle.right ) === 36;
@@ -16861,7 +16861,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	};
 } );
 
-// Support: Safari <=7 - 9.1, Chrome <=37 - 49
+// Support: Safari <=7.html - 9.1, Chrome <=37 - 49
 // Add the top/left cssHooks using jQuery.fn.position
 // Webkit bug: https://bugs.webkit.org/show_bug.cgi?id=29084
 // Blink bug: https://bugs.chromium.org/p/chromium/issues/detail?id=589347
@@ -26369,7 +26369,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 4.7.0
+     * @since 4.7.html.0
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [iteratee=_.identity] The function invoked per iteration.
@@ -26393,7 +26393,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 4.7.0
+     * @since 4.7.html.0
      * @category Collection
      * @param {Array|Object} collection The collection to iterate over.
      * @param {Function} [iteratee=_.identity] The function invoked per iteration.
@@ -26564,8 +26564,8 @@ return jQuery;
      * @returns {Array} Returns the array of results.
      * @example
      *
-     * _.invokeMap([[5, 1, 7], [3, 2, 1]], 'sort');
-     * // => [[1, 5, 7], [1, 2, 3]]
+     * _.invokeMap([[5, 1, 7.html], [3, 2, 1]], 'sort');
+     * // => [[1, 5, 7.html], [1, 2, 3]]
      *
      * _.invokeMap([123, 456], String.prototype.split, '');
      * // => [['1', '2', '3'], ['4', '5', '6']]
@@ -26943,7 +26943,7 @@ return jQuery;
      * // => 2
      *
      * _.size('pebbles');
-     * // => 7
+     * // => 7.html
      */
     function size(collection) {
       if (collection == null) {
@@ -30210,7 +30210,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 3.7.0
+     * @since 3.7.html.0
      * @category Object
      * @param {Object} object The object to query.
      * @param {Array|string} path The path of the property to get.
@@ -30302,7 +30302,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 0.7.0
+     * @since 0.7.html.0
      * @category Object
      * @param {Object} object The object to invert.
      * @returns {Object} Returns the new inverted object.
@@ -30758,7 +30758,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 3.7.0
+     * @since 3.7.html.0
      * @category Object
      * @param {Object} object The object to modify.
      * @param {Array|string} path The path of the property to set.
@@ -30928,7 +30928,7 @@ return jQuery;
      * @returns {boolean} Returns `true` if the property is deleted, else `false`.
      * @example
      *
-     * var object = { 'a': [{ 'b': { 'c': 7 } }] };
+     * var object = { 'a': [{ 'b': { 'c': 7.html } }] };
      * _.unset(object, 'a[0].b.c');
      * // => true
      *
@@ -31161,7 +31161,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 0.7.0
+     * @since 0.7.html.0
      * @category Number
      * @param {number} [lower=0] The lower bound.
      * @param {number} [upper=1] The upper bound.
@@ -32706,7 +32706,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 3.7.0
+     * @since 3.7.html.0
      * @category Util
      * @param {Array|string} path The path of the method to invoke.
      * @param {...*} [args] The arguments to invoke the method with.
@@ -32737,7 +32737,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 3.7.0
+     * @since 3.7.html.0
      * @category Util
      * @param {Object} object The object to query.
      * @param {...*} [args] The arguments to invoke the method with.
@@ -33327,7 +33327,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 4.7.0
+     * @since 4.7.html.0
      * @category Math
      * @param {number} dividend The first number in a division.
      * @param {number} divisor The second number in a division.
@@ -33442,7 +33442,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 4.7.0
+     * @since 4.7.html.0
      * @category Math
      * @param {Array} array The array to iterate over.
      * @param {Function} [iteratee=_.identity] The iteratee invoked per element.
@@ -33520,7 +33520,7 @@ return jQuery;
      *
      * @static
      * @memberOf _
-     * @since 4.7.0
+     * @since 4.7.html.0
      * @category Math
      * @param {number} multiplier The first number in a multiplication.
      * @param {number} multiplicand The second number in a multiplication.
@@ -36792,7 +36792,7 @@ var Popper = function () {
 
     /**
      * Collection of utilities useful when writing custom modifiers.
-     * Starting from version 1.7, this method is available only if you
+     * Starting from version 1.7.html, this method is available only if you
      * include `popper-utils.js` before `popper.js`.
      *
      * **DEPRECATION**: This way to access PopperUtils is deprecated
@@ -37105,7 +37105,7 @@ process.umask = function() { return 0; };
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
-            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7.html it generated a
             // "too much recursion" error.
             setTimeout(runIfPresent, 0, handle);
         } else {
@@ -39421,7 +39421,7 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
   isUsingMicroTask = true;
 } else if (!isIE && typeof MutationObserver !== 'undefined' && (
   isNative(MutationObserver) ||
-  // PhantomJS and iOS 7.x
+  // PhantomJS and iOS 7.html.x
   MutationObserver.toString() === '[object MutationObserverConstructor]'
 )) {
   // Use MutationObserver where native Promise is not available,
@@ -49625,7 +49625,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-  
+
 )
 
 /* hot reload */
@@ -49645,7 +49645,7 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
 

@@ -50,17 +50,6 @@ class WebPageController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param int $id
@@ -129,6 +118,8 @@ class WebPageController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function content($id) {
-        return Storage::url("/webpages/{$id}");
+        return view('webpage.content', [
+            "address" => asset("storage/webpages/{$id}.html")
+        ]);
     }
 }
