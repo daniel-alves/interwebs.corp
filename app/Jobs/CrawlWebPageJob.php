@@ -38,17 +38,22 @@ class CrawlWebPageJob implements ShouldQueue
     {
         Log::channel('crawler')->info("Start crawling Web Page: ", [$this->webPage["address"]]);
 
-        $client = new Client();
-        $result = $client->get($this->webPage["address"]);
+        try {
+            $client = new Client(['http_errors' => false]);
+            $result = $client->get($this->webPage["address"]);
 
-        $date = new \DateTime('now');
+            $date = new \DateTime('now');
 
-        $this->webPage["status_code"] = $result->getStatusCode();
-        $this->webPage["visited_at"] = $date->format("Y-m-d H:i:s");
+            $this->webPage["status_code"] = $result->getStatusCode();
+            $this->webPage["visited_at"] = $date->format("Y-m-d H:i:s");
 
-        Storage::put("/webpages/{$this->webPage["id"]}", $result->getBody());
+            Storage::put("/webpages/{$this->webPage["id"]}", $result->getBody());
 
-        $this->webPage->update();
+            $this->webPage->update();
+        } catch(\Exception $e) {
+            Log::channel('crawler')->error($e->getMessage());
+        }
+
         Log::channel('crawler')->info("End crawling Web Page!");
     }
 }

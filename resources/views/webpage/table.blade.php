@@ -18,7 +18,15 @@
         <tr>
             <td>{{ $webpage->id }}</td>
             <td>{{ $webpage->address }}</td>
-            <td>{{ $webpage->status_code }}</td>
+            <td>
+                @if($webpage->status_code == Symfony\Component\HttpFoundation\Response::HTTP_OK)
+                    <span class="badge badge-success">{{ $webpage->status_code }}</span>
+                @elseif(empty($webpage->status_code))
+                    <span class="badge badge-secondary"> . . . . </span>
+                @else
+                    <span class="badge badge-danger">{{ $webpage->status_code }}</span>
+                @endif
+            </td>
             <td>{{ is_null($webpage->visited_at) ? "" : date('d/m/Y', strtotime($webpage->visited_at)) }}</td>
             <td>
                 <a href="{{ route('webpages.edit', $webpage->id)}}" class="btn btn-primary btn-sm">Editar</a>
