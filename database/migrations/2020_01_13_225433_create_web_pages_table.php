@@ -17,7 +17,6 @@ class CreateWebPagesTable extends Migration
             $table->bigIncrements('id');
             $table->string('address');
             $table->string('status_code')->nullable();
-            $table->text('content')->nullable();
             $table->timestamp('visited_at')->nullable();
             $table->timestamps();
         });

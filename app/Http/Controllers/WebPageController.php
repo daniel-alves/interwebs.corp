@@ -15,9 +15,9 @@ class WebPageController extends Controller
      */
     public function index()
     {
-        $data['webpages'] = WebPage::orderBy('id','desc')->paginate(10);
+        $data['webpages'] = WebPage::orderBy('id', 'desc')->paginate(10);
 
-        return view('webpage.list',$data);
+        return view('webpage.list', $data);
     }
 
     /**
@@ -33,7 +33,7 @@ class WebPageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -42,21 +42,16 @@ class WebPageController extends Controller
             'address' => 'required|url'
         ]);
 
-        $data = $request->all();
-        $data["content"] = null;
-        $data["visited_at"] = null;
-        $data["status_code"] = null;
-
         WebPage::create($request->all());
 
         return Redirect::to('webpages')
-            ->with('success','Great! Web page created successfully.');
+            ->with('success', 'Great! Web page created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -67,7 +62,7 @@ class WebPageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -81,8 +76,8 @@ class WebPageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -92,23 +87,26 @@ class WebPageController extends Controller
         ]);
 
         $update = ['address' => $request->address];
-        WebPage::where('id', $id)->update($update);
+
+        //o first aqui serve para rodar o observer corretamente
+        WebPage::where('id', $id)->first()->update($update);
 
         return Redirect::to('webpages')
-            ->with('success','Great! Web page updated successfully');
+            ->with('success', 'Great! Web page updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        WebPage::where('id', $id)->delete();
+        //o first aqui serve para rodar o observer corretamente
+        WebPage::where('id', $id)->first()->delete();
 
-        return Redirect::to('webpages')->with('success','Web page deleted successfully');
+        return Redirect::to('webpages')->with('success', 'Web page deleted successfully');
     }
 
     /**
@@ -118,7 +116,7 @@ class WebPageController extends Controller
      */
     public function reload()
     {
-        $data['webpages'] = WebPage::orderBy('id','desc')->paginate(10);
+        $data['webpages'] = WebPage::orderBy('id', 'desc')->paginate(10);
 
         return view('webpage.table', $data);
     }
