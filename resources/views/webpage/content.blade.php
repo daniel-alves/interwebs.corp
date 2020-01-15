@@ -5,11 +5,8 @@
         <br>
         <a href="{{ route('webpages.index') }}" class="mb-2">Voltar para listagem</a>
         <br/><br/>
-{{--        <iframe src="{{$address}}" width="100%"></iframe>--}}
-
-        <object data="{{$address}}" width="100%" height="980px" type="text/html">
-            Ohh My Gosh, run to the hills!!!
-        </object>
-
+        <iframe src="{{$address}}" width="100%" height="700px" sandbox type="text/html" style="border: 1px solid black;">
+            Oops, algo inesperado aconteceu, não foi possível salvar o conteúdo da página solicitada!!
+        </iframe>
     </div>
 @endsection

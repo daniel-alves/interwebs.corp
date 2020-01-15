@@ -39,7 +39,7 @@
                 </form>
             </td>
             <td>
-                @if(!is_null($webpage->visited_at))
+                @if($webpage->status_code == Symfony\Component\HttpFoundation\Response::HTTP_OK)
                     <a href="{{ route('webpages.content', $webpage->id)}}" class="btn btn-success btn-sm">Conteúdo</a>
                 @else
                     <a href="javascript:;" class="btn btn-success btn-sm disabled">Conteúdo</a>
