@@ -5,6 +5,7 @@ Sugiro utilizar o  [Homestead](https://laravel.com/docs/6.x/homestead) como ambi
 > php composer install
 
 **Criar arquivo .env**
+
 Execute o seguinte comando e altere dentro do arquivo .env os dados referentes a conexão com o banco de dados
 > copy .env.example .env
 
