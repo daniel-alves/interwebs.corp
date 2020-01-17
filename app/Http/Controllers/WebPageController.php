@@ -114,12 +114,13 @@ class WebPageController extends Controller
     /**
      * returns the content of the web page crawled
      *
-     * @param int $id
+     * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
     public function content($id) {
         return view('webpage.content', [
-            "address" => asset("storage/webpages/{$id}.html")
+            "address" => Storage::disk('public')->get("webpages/{$id}.html")
         ]);
     }
 }
